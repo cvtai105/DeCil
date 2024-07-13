@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\App\\App.csproj": {}
+    "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\app\\App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\App\\App.csproj": {
+    "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\app\\App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\App\\App.csproj",
+        "projectUniqueName": "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\app\\App.csproj",
         "projectName": "App",
-        "projectPath": "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\App\\App.csproj",
+        "projectPath": "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\app\\App.csproj",
         "packagesPath": "C:\\Users\\cvtai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\App\\obj\\",
+        "outputPath": "C:\\Users\\cvtai\\OneDrive\\Desktop\\DeCil\\src\\catalog\\app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,10 +49,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
