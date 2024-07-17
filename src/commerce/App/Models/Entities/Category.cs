@@ -4,16 +4,18 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-namespace app.Models
+namespace App.Models.Entities
 {
     public class Category
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
-        public Guid ParentId { get; set; }
-        public string Name { get; set; } = "Chưa đặt tên";
-        public string Description { get; set; } = "Chưa có mô tả";
+        public int Id { get; set; } 
+        public int? ParentId { get; set; }
+        public string Name { get; set; } = null!;
+        public string Description { get; set; } = "";
         public string? Image { get; set; }
         public string? Icon { get; set; }
-        public IEnumerable<ProductCategory> Products { get; set; } = [];
+        public IEnumerable<ProductCategory>? Products { get; set; }
+        public IEnumerable<Category>? Children { get; set; }
+        public Category? Parent { get; set; }
     }
 }

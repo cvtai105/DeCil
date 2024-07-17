@@ -11,7 +11,7 @@
 - dotnet add package Microsoft.EntityFrameworkCore.Design 
 - dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 - dotnet add package Microsoft.EntityFrameworkCore.Tools
-- add migration: dotnet ef migrations add <tenmigration> 
+- add migration: dotnet ef migrations add <versionName> 
 - update database: dotnet ef database update
 - reset database: dotnet ef database update 0  -> dotnet ef database update
 - drop: dotnet ef database drop
@@ -25,3 +25,11 @@
 - dotnet tool install -g dotnet-aspnet-codegenerator
 - dotnet tool update -g dotnet-aspnet-codegenerator
 - dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+
+## Serilog
+- dotnet add package Serilog.AspNetCore
+
+
+## Auth
+- Admin: https://medium.com/@amund.fremming/integrating-jwt-to-net-8-925c4f60695e
+- Gmail:

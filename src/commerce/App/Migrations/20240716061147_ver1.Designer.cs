@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using app.Models;
 
@@ -11,9 +12,11 @@ using app.Models;
 namespace App.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240716061147_ver1")]
+    partial class ver1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,35 +24,6 @@ namespace App.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("App.Models.Entities.Admin", b =>
-                {
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Avatar")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Email");
-
-                    b.ToTable("Admins");
-
-                    b.HasData(
-                        new
-                        {
-                            Email = "admin@gmail.com",
-                            Password = "admin"
-                        });
-                });
 
             modelBuilder.Entity("App.Models.Entities.Attribute", b =>
                 {
@@ -103,25 +77,25 @@ namespace App.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "",
+                            Description = "Chưa có mô tả",
                             Name = "Điện thoại"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "",
+                            Description = "Chưa có mô tả",
                             Name = "Máy tính bảng"
                         },
                         new
                         {
                             Id = 3,
-                            Description = "",
+                            Description = "Chưa có mô tả",
                             Name = "Laptop"
                         },
                         new
                         {
                             Id = 4,
-                            Description = "",
+                            Description = "Chưa có mô tả",
                             Name = "Phụ kiện"
                         });
                 });
@@ -305,45 +279,45 @@ namespace App.Migrations
                         {
                             Id = 1,
                             BasePrice = 10000000,
-                            CreatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6922),
+                            CreatedAt = new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(770),
                             Description = "Chưa có mô tả",
                             Name = "Iphone 12",
                             Stock = 100,
                             Summary = "Chưa có mô tả",
-                            UpdatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6942)
+                            UpdatedAt = new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(784)
                         },
                         new
                         {
                             Id = 2,
                             BasePrice = 12000000,
-                            CreatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6948),
+                            CreatedAt = new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(790),
                             Description = "Chưa có mô tả",
                             Name = "Samsung Galaxy S21",
                             Stock = 100,
                             Summary = "Chưa có mô tả",
-                            UpdatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6948)
+                            UpdatedAt = new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(790)
                         },
                         new
                         {
                             Id = 3,
                             BasePrice = 5000000,
-                            CreatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6950),
+                            CreatedAt = new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(791),
                             Description = "Chưa có mô tả",
                             Name = "Xiaomi Redmi Note 10",
                             Stock = 100,
                             Summary = "Chưa có mô tả",
-                            UpdatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6950)
+                            UpdatedAt = new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(792)
                         },
                         new
                         {
                             Id = 4,
                             BasePrice = 20000000,
-                            CreatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6951),
+                            CreatedAt = new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(793),
                             Description = "Chưa có mô tả",
                             Name = "Apple Watch",
                             Stock = 100,
                             Summary = "Chưa có mô tả",
-                            UpdatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6951)
+                            UpdatedAt = new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(793)
                         });
                 });
 

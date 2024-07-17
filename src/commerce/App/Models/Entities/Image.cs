@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace app.Models
+namespace App.Models.Entities
 {
     public class Image
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
-        public string Name { get; set; } = "Chưa đặt tên";
+        public int Id { get; set; }
+        public string Name { get; set; } = "";
         public string? Link { get; set; }
-        public IEnumerable<ProductImage> Products { get; set; } = [];
+        public IEnumerable<ProductImage>? Products { get; set; } = [];
     }
 }

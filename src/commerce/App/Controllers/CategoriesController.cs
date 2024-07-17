@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using App.Models.Entities;
 using app.Models;
 
 namespace App.Controllers
@@ -29,22 +30,23 @@ namespace App.Controllers
 
         // GET: api/Categories/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Category>> GetCategory(Guid id)
+        public  Task<ActionResult<Category>> GetCategory(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
+            // var category = await _context.Categories.FindAsync(id);
 
-            if (category == null)
-            {
-                return NotFound();
-            }
+            // if (category == null)
+            // {
+            //     return NotFound();
+            // }
 
-            return category;
+            // return category;
+            throw new NotImplementedException();
         }
 
         // PUT: api/Categories/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCategory(Guid id, Category category)
+        public async Task<IActionResult> PutCategory(int id, Category category)
         {
             if (id != category.Id)
             {
@@ -85,21 +87,22 @@ namespace App.Controllers
 
         // DELETE: api/Categories/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCategory(Guid id)
+        public  Task<IActionResult> DeleteCategory(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
-            {
-                return NotFound();
-            }
+            // var category = await _context.Categories.FindAsync(id);
+            // if (category == null)
+            // {
+            //     return NotFound();
+            // }
 
-            _context.Categories.Remove(category);
-            await _context.SaveChangesAsync();
+            // _context.Categories.Remove(category);
+            // await _context.SaveChangesAsync();
 
-            return NoContent();
+            // return NoContent();
+            throw new NotImplementedException();
         }
 
-        private bool CategoryExists(Guid id)
+        private bool CategoryExists(int id)
         {
             return _context.Categories.Any(e => e.Id == id);
         }

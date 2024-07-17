@@ -1,0 +1,969 @@
+2024-07-17 03:58:58.128 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 03:58:58.135 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 03:58:58.136 +07:00 [INF] Hosting environment: Development
+2024-07-17 03:58:58.136 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 03:58:58.311 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 03:58:58.426 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 115.9586ms
+2024-07-17 03:58:58.442 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 03:58:58.443 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.7232ms
+2024-07-17 03:58:58.565 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 03:58:58.642 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 77.1329ms
+2024-07-17 04:02:08.280 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:02:08.288 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-07-17 04:02:08.292 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:02:08.306 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:02:09.056 +07:00 [INF] Executed DbCommand (34ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Description], [c].[Icon], [c].[Image], [c].[Name], [c].[ParentId]
+FROM [Category] AS [c]
+WHERE [c].[Id] = @__p_0
+2024-07-17 04:02:09.103 +07:00 [INF] Executing ObjectResult, writing value of type 'App.Models.Entities.Category'.
+2024-07-17 04:02:09.120 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 810.4254ms
+2024-07-17 04:02:09.120 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:02:09.121 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/plain
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+ResponseBody: {"id":1,"name":"Điện thoại","description":""}
+Duration: 831.8692
+2024-07-17 04:02:09.126 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 200 null application/json; charset=utf-8 845.4446ms
+2024-07-17 04:02:11.984 +07:00 [INF] Application is shutting down...
+2024-07-17 04:02:20.305 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 04:02:20.312 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 04:02:20.313 +07:00 [INF] Hosting environment: Development
+2024-07-17 04:02:20.313 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 04:02:20.489 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:02:20.579 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 90.4228ms
+2024-07-17 04:02:20.588 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:02:20.589 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.1385ms
+2024-07-17 04:02:20.707 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:02:20.774 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 66.541ms
+2024-07-17 04:02:25.134 +07:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:02:25.142 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-07-17 04:02:25.146 +07:00 [INF] CORS policy execution successful.
+2024-07-17 04:02:25.147 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.DeleteCategory (App)'
+2024-07-17 04:02:25.161 +07:00 [INF] Route matched with {action = "DeleteCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:02:25.237 +07:00 [INF] Executed action App.Controllers.CategoriesController.DeleteCategory (App) in 70.1427ms
+2024-07-17 04:02:25.238 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.DeleteCategory (App)'
+2024-07-17 04:02:25.239 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: DELETE
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: */*
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Origin: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 95.0176
+2024-07-17 04:02:25.255 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Sample exception.
+   at App.Controllers.CategoriesController.DeleteCategory(Int32 id) in C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app\Controllers\CategoriesController.cs:line 101
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:02:25.260 +07:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5074/api/Categories/1 - 500 null text/plain; charset=utf-8 126.4393ms
+2024-07-17 04:02:39.791 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:02:39.798 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 6.4611ms
+2024-07-17 04:02:39.808 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:02:39.808 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.3021ms
+2024-07-17 04:02:39.858 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:02:39.867 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.6034ms
+2024-07-17 04:02:48.397 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:02:48.401 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 4.2355ms
+2024-07-17 04:02:48.416 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:02:48.416 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1988ms
+2024-07-17 04:02:48.464 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:02:48.474 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.7641ms
+2024-07-17 04:03:13.520 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:03:13.525 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 4.7569ms
+2024-07-17 04:03:13.535 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:03:13.535 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1864ms
+2024-07-17 04:03:13.585 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:03:13.590 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.6065ms
+2024-07-17 04:03:20.105 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:03:20.105 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:03:20.110 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:03:20.117 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 6.3913ms
+2024-07-17 04:03:20.117 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:03:20.117 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/plain
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 11.8217
+2024-07-17 04:03:20.117 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id)
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:03:20.119 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/plain; charset=utf-8 14.0734ms
+2024-07-17 04:03:25.345 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:03:25.347 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:03:25.347 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:03:25.349 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 1.5519ms
+2024-07-17 04:03:25.349 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:03:25.349 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 2.8547
+2024-07-17 04:03:25.350 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id)
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:03:25.360 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/html; charset=utf-8 14.6655ms
+2024-07-17 04:03:25.390 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:03:25.390 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.3055ms
+2024-07-17 04:03:25.510 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/favicon.ico - null null
+2024-07-17 04:03:25.511 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /favicon.ico
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 404
+Duration: 0.141
+2024-07-17 04:03:25.511 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/favicon.ico - 404 0 null 0.7837ms
+2024-07-17 04:03:25.511 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5074/favicon.ico, Response status code: 404
+2024-07-17 04:05:20.325 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:05:20.325 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:05:20.326 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:05:20.327 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 0.7958ms
+2024-07-17 04:05:20.327 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:05:20.327 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 1.4458
+2024-07-17 04:05:20.327 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id)
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:05:20.329 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/html; charset=utf-8 4.3944ms
+2024-07-17 04:05:20.343 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:05:20.343 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2738ms
+2024-07-17 04:05:22.386 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:05:22.386 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:05:22.386 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:05:22.387 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 0.548ms
+2024-07-17 04:05:22.387 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:05:22.387 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 0.9606
+2024-07-17 04:05:22.388 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id)
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:05:22.390 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/html; charset=utf-8 4.0094ms
+2024-07-17 04:05:22.401 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:05:22.401 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1423ms
+2024-07-17 04:19:53.849 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:19:53.849 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:19:53.849 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:19:53.850 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 0.648ms
+2024-07-17 04:19:53.850 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:19:53.850 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 1.1079
+2024-07-17 04:19:53.851 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id)
+   at lambda_method26(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:19:53.852 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/html; charset=utf-8 3.7785ms
+2024-07-17 04:19:53.868 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:19:53.869 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1533ms
+2024-07-17 04:21:10.217 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:21:10.218 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:21:10.221 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:21:10.222 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 0.7331ms
+2024-07-17 04:21:10.222 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:21:10.222 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 4.0189
+2024-07-17 04:21:10.222 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id)
+   at lambda_method34(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:21:10.224 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/html; charset=utf-8 7.1767ms
+2024-07-17 04:21:10.233 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:21:10.234 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1693ms
+2024-07-17 04:21:16.663 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:21:16.664 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:21:16.667 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:21:16.667 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 0.6978ms
+2024-07-17 04:21:16.667 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:21:16.668 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 4.0101
+2024-07-17 04:21:16.668 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id)
+   at lambda_method42(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:21:16.670 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/html; charset=utf-8 6.4753ms
+2024-07-17 04:21:16.679 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:21:16.679 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1439ms
+2024-07-17 04:27:53.290 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 04:27:53.298 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 04:27:53.298 +07:00 [INF] Hosting environment: Development
+2024-07-17 04:27:53.299 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 04:27:53.321 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:27:53.349 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-07-17 04:27:53.354 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:27:53.366 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:27:53.444 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 73.2887ms
+2024-07-17 04:27:53.446 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:27:53.447 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 95.1028
+2024-07-17 04:27:53.459 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id) in C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app\Controllers\CategoriesController.cs:line 43
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:27:53.484 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/html; charset=utf-8 163.4213ms
+2024-07-17 04:27:53.495 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:27:53.496 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.1482ms
+2024-07-17 04:28:06.210 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 04:28:06.218 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 04:28:06.218 +07:00 [INF] Hosting environment: Development
+2024-07-17 04:28:06.218 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 04:28:06.242 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:28:06.273 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-07-17 04:28:06.278 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:28:06.294 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:28:06.373 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 73.8788ms
+2024-07-17 04:28:06.375 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:28:06.376 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 100.1577
+2024-07-17 04:28:06.389 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id) in C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app\Controllers\CategoriesController.cs:line 43
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:28:06.405 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/html; charset=utf-8 163.8461ms
+2024-07-17 04:28:06.416 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:28:06.417 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.213ms
+2024-07-17 04:28:16.079 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 04:28:16.089 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 04:28:16.089 +07:00 [INF] Hosting environment: Development
+2024-07-17 04:28:16.089 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 04:28:16.112 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:28:16.141 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-07-17 04:28:16.145 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:28:16.158 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:28:16.245 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 82.5054ms
+2024-07-17 04:28:16.246 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:28:16.247 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Cache-Control: max-age=0
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 200
+Duration: 104.3097
+2024-07-17 04:28:16.261 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id) in C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app\Controllers\CategoriesController.cs:line 43
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:28:16.278 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null text/html; charset=utf-8 166.9882ms
+2024-07-17 04:28:16.292 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:28:16.293 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.2647ms
+2024-07-17 04:32:53.144 +07:00 [INF] Application is shutting down...
+2024-07-17 04:33:01.033 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 04:33:01.040 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 04:33:01.040 +07:00 [INF] Hosting environment: Development
+2024-07-17 04:33:01.040 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 04:33:01.206 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:33:01.301 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 95.6514ms
+2024-07-17 04:33:01.311 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:33:01.313 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.0889ms
+2024-07-17 04:33:01.434 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:33:01.493 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - App.Controllers.ErrorsController.HandleErrorDevelopment (App). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:33:01.495 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 61.2063ms
+2024-07-17 04:33:47.329 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 04:33:47.336 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 04:33:47.336 +07:00 [INF] Hosting environment: Development
+2024-07-17 04:33:47.336 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 04:33:47.526 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:33:47.630 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 103.8071ms
+2024-07-17 04:33:47.642 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:33:47.643 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.3156ms
+2024-07-17 04:33:47.758 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:33:47.826 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - App.Controllers.ErrorsController.HandleErrorDevelopment (App). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:33:47.830 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 72.2925ms
+2024-07-17 04:35:19.292 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 04:35:19.299 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 04:35:19.299 +07:00 [INF] Hosting environment: Development
+2024-07-17 04:35:19.299 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 04:35:19.326 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:35:19.406 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 81.406ms
+2024-07-17 04:35:19.417 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:35:19.419 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.3122ms
+2024-07-17 04:35:19.741 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:35:19.791 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - App.Controllers.ErrorsController.HandleErrorDevelopment (App). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:35:19.794 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 52.4641ms
+2024-07-17 04:35:40.063 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:35:40.073 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 9.3183ms
+2024-07-17 04:35:40.086 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:35:40.087 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.3011ms
+2024-07-17 04:35:40.451 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:35:40.457 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - App.Controllers.ErrorsController.HandleErrorDevelopment (App). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-17 04:35:40.458 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 6.6523ms
+2024-07-17 04:36:05.083 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 04:36:05.091 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 04:36:05.092 +07:00 [INF] Hosting environment: Development
+2024-07-17 04:36:05.092 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 04:36:05.118 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:36:05.199 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 82.2799ms
+2024-07-17 04:36:05.207 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:36:05.208 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.2606ms
+2024-07-17 04:36:05.494 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:36:05.554 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.2812ms
+2024-07-17 04:37:07.782 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:37:07.788 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 5.9259ms
+2024-07-17 04:37:07.798 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:37:07.799 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.3153ms
+2024-07-17 04:37:07.847 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:37:07.855 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.3487ms
+2024-07-17 04:37:13.682 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Categories/1 - null null
+2024-07-17 04:37:13.688 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-07-17 04:37:13.693 +07:00 [INF] Executing endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:37:13.704 +07:00 [INF] Route matched with {action = "GetCategory", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[App.Models.Entities.Category]] GetCategory(Int32) on controller App.Controllers.CategoriesController (App).
+2024-07-17 04:37:13.767 +07:00 [INF] Executed action App.Controllers.CategoriesController.GetCategory (App) in 59.1136ms
+2024-07-17 04:37:13.767 +07:00 [INF] Executed endpoint 'App.Controllers.CategoriesController.GetCategory (App)'
+2024-07-17 04:37:13.772 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at App.Controllers.CategoriesController.GetCategory(Int32 id)
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-07-17 04:37:13.774 +07:00 [INF] Executing endpoint 'App.Controllers.ErrorsController.HandleErrorDevelopment (App)'
+2024-07-17 04:37:13.777 +07:00 [INF] Route matched with {action = "HandleErrorDevelopment", controller = "Errors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult HandleErrorDevelopment(Microsoft.Extensions.Hosting.IHostEnvironment) on controller App.Controllers.ErrorsController (App).
+2024-07-17 04:37:13.781 +07:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-07-17 04:37:13.795 +07:00 [INF] Executed action App.Controllers.ErrorsController.HandleErrorDevelopment (App) in 17.996ms
+2024-07-17 04:37:13.795 +07:00 [INF] Executed endpoint 'App.Controllers.ErrorsController.HandleErrorDevelopment (App)'
+2024-07-17 04:37:13.797 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /api/Categories/1
+Accept: text/plain
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 500
+Content-Type: application/problem+json; charset=utf-8
+ResponseBody: {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"The method or operation is not implemented.","status":500,"detail":"   at App.Controllers.CategoriesController.GetCategory(Int32 id)\r\n   at lambda_method6(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)","traceId":"00-81742ca0ae6d3f3d6df916289788f47f-3521e4b1740138dd-00"}
+Duration: 105.9521
+2024-07-17 04:37:13.798 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Categories/1 - 500 null application/problem+json; charset=utf-8 116.2929ms
+2024-07-17 04:38:12.682 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:38:12.688 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 6.1683ms
+2024-07-17 04:38:12.702 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:38:12.703 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2466ms
+2024-07-17 04:38:12.918 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:38:12.924 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.0152ms
+2024-07-17 04:38:29.110 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:38:29.122 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 11.7903ms
+2024-07-17 04:38:29.146 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:38:29.146 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.255ms
+2024-07-17 04:38:29.213 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:38:29.219 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.3085ms
+2024-07-17 04:38:41.524 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:38:41.530 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 5.9248ms
+2024-07-17 04:38:41.545 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:38:41.545 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1847ms
+2024-07-17 04:38:41.600 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:38:41.604 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.2154ms
+2024-07-17 04:38:48.718 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:38:48.724 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 5.6752ms
+2024-07-17 04:38:48.736 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:38:48.736 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1625ms
+2024-07-17 04:38:48.804 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:38:48.810 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.0669ms
+2024-07-17 04:57:06.814 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/error - null null
+2024-07-17 04:57:06.815 +07:00 [INF] Executing endpoint 'App.Controllers.ErrorsController.HandleError (App)'
+2024-07-17 04:57:06.816 +07:00 [INF] Route matched with {action = "HandleError", controller = "Errors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult HandleError() on controller App.Controllers.ErrorsController (App).
+2024-07-17 04:57:06.817 +07:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-07-17 04:57:06.819 +07:00 [INF] Executed action App.Controllers.ErrorsController.HandleError (App) in 2.8696ms
+2024-07-17 04:57:06.819 +07:00 [INF] Executed endpoint 'App.Controllers.ErrorsController.HandleError (App)'
+2024-07-17 04:57:06.820 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /error
+Accept: */*
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 500
+Content-Type: application/problem+json; charset=utf-8
+ResponseBody: {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"An error occurred while processing your request.","status":500,"traceId":"00-28d1d4c64c049951cf6b07f982b6bef7-c16a0b0067d72cda-00"}
+Duration: 5.1564
+2024-07-17 04:57:06.820 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/error - 500 null application/problem+json; charset=utf-8 5.7909ms
+2024-07-17 04:57:08.213 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/error - null null
+2024-07-17 04:57:08.214 +07:00 [INF] Executing endpoint 'App.Controllers.ErrorsController.HandleError (App)'
+2024-07-17 04:57:08.214 +07:00 [INF] Route matched with {action = "HandleError", controller = "Errors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult HandleError() on controller App.Controllers.ErrorsController (App).
+2024-07-17 04:57:08.214 +07:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2024-07-17 04:57:08.215 +07:00 [INF] Executed action App.Controllers.ErrorsController.HandleError (App) in 0.2702ms
+2024-07-17 04:57:08.215 +07:00 [INF] Executed endpoint 'App.Controllers.ErrorsController.HandleError (App)'
+2024-07-17 04:57:08.215 +07:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /error
+Accept: */*
+Connection: keep-alive
+Host: localhost:5074
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+Referer: [Redacted]
+sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+StatusCode: 500
+Content-Type: application/problem+json; charset=utf-8
+ResponseBody: {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"An error occurred while processing your request.","status":500,"traceId":"00-dfe6f344845c474dff7a12f860a2515c-ea7cbea7948f5826-00"}
+Duration: 0.7732
+2024-07-17 04:57:08.215 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/error - 500 null application/problem+json; charset=utf-8 1.74ms
+2024-07-17 04:57:27.646 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 04:57:27.650 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 4.3755ms
+2024-07-17 04:57:27.667 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 04:57:27.667 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1909ms
+2024-07-17 04:57:27.799 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 04:57:27.804 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.037ms
+2024-07-17 05:10:58.548 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 05:10:58.552 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 4.0357ms
+2024-07-17 05:10:58.567 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 05:10:58.567 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2085ms
+2024-07-17 05:10:58.718 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 05:10:58.721 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.8633ms
+2024-07-17 12:36:04.408 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 12:36:04.414 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 12:36:04.415 +07:00 [INF] Hosting environment: Development
+2024-07-17 12:36:04.415 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 12:36:04.625 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 12:36:04.721 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 100.3735ms
+2024-07-17 12:36:04.733 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 12:36:04.735 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.7749ms
+2024-07-17 12:36:04.958 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 12:36:05.027 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 68.6866ms
+2024-07-17 12:38:19.855 +07:00 [INF] Application is shutting down...
+2024-07-17 12:39:28.971 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 12:39:28.978 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 12:39:28.978 +07:00 [INF] Hosting environment: Development
+2024-07-17 12:39:28.978 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 12:39:29.146 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 12:39:29.248 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 102.3225ms
+2024-07-17 12:39:29.264 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 12:39:29.265 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.5211ms
+2024-07-17 12:39:29.398 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 12:39:29.466 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.7623ms
+2024-07-17 12:39:42.929 +07:00 [INF] Application is shutting down...
+2024-07-17 12:39:48.381 +07:00 [INF] User profile is available. Using 'C:\Users\cvtai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-17 12:39:48.451 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 12:39:48.452 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 12:39:48.452 +07:00 [INF] Hosting environment: Development
+2024-07-17 12:39:48.452 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 12:39:48.622 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 12:39:48.717 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 95.3418ms
+2024-07-17 12:39:48.730 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 12:39:48.732 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.3485ms
+2024-07-17 12:39:48.854 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 12:39:48.927 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.9449ms
+2024-07-17 12:39:55.695 +07:00 [INF] Application is shutting down...
+2024-07-17 12:40:02.652 +07:00 [INF] User profile is available. Using 'C:\Users\cvtai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-17 12:40:02.710 +07:00 [INF] Now listening on: http://localhost:5074
+2024-07-17 12:40:02.711 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-17 12:40:02.712 +07:00 [INF] Hosting environment: Development
+2024-07-17 12:40:02.712 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\DeCil\src\commerce\app
+2024-07-17 12:40:02.897 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2024-07-17 12:40:02.998 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 102.0354ms
+2024-07-17 12:40:03.013 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-17 12:40:03.015 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.0686ms
+2024-07-17 12:40:03.128 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2024-07-17 12:40:03.200 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 71.7275ms
+2024-07-17 12:42:03.638 +07:00 [INF] Application is shutting down...

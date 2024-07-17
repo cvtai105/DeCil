@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace app.Models
+namespace App.Models.Entities
 {
     public class Product
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public int Id { get; set; }
         public string Name { get; set; } = "Chưa đặt tên";
         public string? Picture { get; set; }
         public string Summary { get; set; } = "Chưa có mô tả";
@@ -17,10 +17,10 @@ namespace app.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
-        public IEnumerable<Review> Reviews { get; set; } = [];
-        public IEnumerable<ProductAttribute> Attributes { get; set; } = [];
-        public IEnumerable<ProductImage> Images { get; set; } = [];
-        public IEnumerable<ProductCategory> Categories { get; set; } = [];
+        public IEnumerable<Review>? Reviews { get; set; } = [];
+        public IEnumerable<ProductAttribute>? Attributes { get; set; } = [];
+        public IEnumerable<ProductImage>? Images { get; set; } = [];
+        public IEnumerable<ProductCategory>? Categories { get; set; } = [];
         public Discount? Discount { get; set; }
 
     }

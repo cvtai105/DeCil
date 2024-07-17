@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace app.Models
+namespace App.Models.Entities
 {
     public class Attribute
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
-        public string Name { get; set; } = "Biến thể";
-        public IEnumerable<ProductAttribute> Products { get; set; } = [];
+        public int Id { get; set; }
+        public string Name { get; set; } = null!;
+        public IEnumerable<ProductAttribute>? Products { get; set; } 
     }
 }
