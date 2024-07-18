@@ -128,8 +128,8 @@ namespace App.Migrations
 
             modelBuilder.Entity("App.Models.Entities.Discount", b =>
                 {
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<string>("ProductId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
@@ -181,11 +181,8 @@ namespace App.Migrations
 
             modelBuilder.Entity("App.Models.Entities.Image", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Link")
                         .HasColumnType("nvarchar(max)");
@@ -246,8 +243,9 @@ namespace App.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -263,11 +261,8 @@ namespace App.Migrations
 
             modelBuilder.Entity("App.Models.Entities.Product", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("BasePrice")
                         .HasColumnType("int");
@@ -303,47 +298,47 @@ namespace App.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = "pro001",
                             BasePrice = 10000000,
-                            CreatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6922),
+                            CreatedAt = new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7854),
                             Description = "Chưa có mô tả",
                             Name = "Iphone 12",
                             Stock = 100,
                             Summary = "Chưa có mô tả",
-                            UpdatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6942)
+                            UpdatedAt = new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7865)
                         },
                         new
                         {
-                            Id = 2,
+                            Id = "pro002",
                             BasePrice = 12000000,
-                            CreatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6948),
+                            CreatedAt = new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7871),
                             Description = "Chưa có mô tả",
                             Name = "Samsung Galaxy S21",
                             Stock = 100,
                             Summary = "Chưa có mô tả",
-                            UpdatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6948)
+                            UpdatedAt = new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7872)
                         },
                         new
                         {
-                            Id = 3,
+                            Id = "pro003",
                             BasePrice = 5000000,
-                            CreatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6950),
+                            CreatedAt = new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7874),
                             Description = "Chưa có mô tả",
                             Name = "Xiaomi Redmi Note 10",
                             Stock = 100,
                             Summary = "Chưa có mô tả",
-                            UpdatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6950)
+                            UpdatedAt = new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7874)
                         },
                         new
                         {
-                            Id = 4,
+                            Id = "pro004",
                             BasePrice = 20000000,
-                            CreatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6951),
+                            CreatedAt = new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7876),
                             Description = "Chưa có mô tả",
                             Name = "Apple Watch",
                             Stock = 100,
                             Summary = "Chưa có mô tả",
-                            UpdatedAt = new DateTime(2024, 7, 16, 13, 20, 21, 191, DateTimeKind.Local).AddTicks(6951)
+                            UpdatedAt = new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7876)
                         });
                 });
 
@@ -364,8 +359,9 @@ namespace App.Migrations
                     b.Property<int>("PriceDif")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .IsRequired()
@@ -382,8 +378,8 @@ namespace App.Migrations
 
             modelBuilder.Entity("App.Models.Entities.ProductCategory", b =>
                 {
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<string>("ProductId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
@@ -397,48 +393,40 @@ namespace App.Migrations
                     b.HasData(
                         new
                         {
-                            ProductId = 1,
+                            ProductId = "pro001",
                             CategoryId = 1
                         },
                         new
                         {
-                            ProductId = 2,
+                            ProductId = "pro001",
                             CategoryId = 2
                         },
                         new
                         {
-                            ProductId = 3,
+                            ProductId = "pro001",
                             CategoryId = 3
                         },
                         new
                         {
-                            ProductId = 4,
+                            ProductId = "pro001",
                             CategoryId = 4
                         });
                 });
 
             modelBuilder.Entity("App.Models.Entities.ProductImage", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("ProductId")
+                        .HasColumnType("nvarchar(450)");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ImageId")
-                        .HasColumnType("int");
+                    b.Property<string>("ImageId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Order")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
+                    b.HasKey("ProductId", "ImageId");
 
                     b.HasIndex("ImageId");
-
-                    b.HasIndex("ProductId");
 
                     b.ToTable("ProductImages");
                 });
@@ -461,8 +449,9 @@ namespace App.Migrations
                     b.Property<int?>("ParentId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("Rating")
                         .IsRequired()
@@ -504,6 +493,9 @@ namespace App.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Salt")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

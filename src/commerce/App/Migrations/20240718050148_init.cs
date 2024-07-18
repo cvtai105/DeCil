@@ -8,11 +8,26 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace App.Migrations
 {
     /// <inheritdoc />
-    public partial class ver1 : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Admins",
+                columns: table => new
+                {
+                    Email = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Avatar = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Admins", x => x.Email);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Attributes",
                 columns: table => new
@@ -65,8 +80,7 @@ namespace App.Migrations
                 name: "Images",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Link = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -79,8 +93,7 @@ namespace App.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Picture = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Summary = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -103,6 +116,7 @@ namespace App.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Salt = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Avatar = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -116,7 +130,7 @@ namespace App.Migrations
                 name: "Discounts",
                 columns: table => new
                 {
-                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Value = table.Column<int>(type: "int", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -144,7 +158,7 @@ namespace App.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     AttributeId = table.Column<int>(type: "int", nullable: false),
                     Value = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageId = table.Column<int>(type: "int", nullable: false),
@@ -171,7 +185,7 @@ namespace App.Migrations
                 name: "ProductCategories",
                 columns: table => new
                 {
-                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -195,15 +209,13 @@ namespace App.Migrations
                 name: "ProductImages",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ProductId = table.Column<int>(type: "int", nullable: false),
-                    ImageId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ImageId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Order = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductImages", x => x.Id);
+                    table.PrimaryKey("PK_ProductImages", x => new { x.ProductId, x.ImageId });
                     table.ForeignKey(
                         name: "FK_ProductImages_Images_ImageId",
                         column: x => x.ImageId,
@@ -248,7 +260,7 @@ namespace App.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rating = table.Column<int>(type: "int", nullable: false),
@@ -310,7 +322,7 @@ namespace App.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderId = table.Column<int>(type: "int", nullable: false),
-                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     ItemPrice = table.Column<int>(type: "int", nullable: false)
                 },
@@ -332,14 +344,19 @@ namespace App.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Admins",
+                columns: new[] { "Email", "Avatar", "Name", "Password", "Phone" },
+                values: new object[] { "admin@gmail.com", null, null, "admin", null });
+
+            migrationBuilder.InsertData(
                 table: "Category",
                 columns: new[] { "Id", "Description", "Icon", "Image", "Name", "ParentId" },
                 values: new object[,]
                 {
-                    { 1, "Chưa có mô tả", null, null, "Điện thoại", null },
-                    { 2, "Chưa có mô tả", null, null, "Máy tính bảng", null },
-                    { 3, "Chưa có mô tả", null, null, "Laptop", null },
-                    { 4, "Chưa có mô tả", null, null, "Phụ kiện", null }
+                    { 1, "", null, null, "Điện thoại", null },
+                    { 2, "", null, null, "Máy tính bảng", null },
+                    { 3, "", null, null, "Laptop", null },
+                    { 4, "", null, null, "Phụ kiện", null }
                 });
 
             migrationBuilder.InsertData(
@@ -356,10 +373,10 @@ namespace App.Migrations
                 columns: new[] { "Id", "BasePrice", "CreatedAt", "Description", "Name", "Picture", "Stock", "Summary", "UpdatedAt" },
                 values: new object[,]
                 {
-                    { 1, 10000000, new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(770), "Chưa có mô tả", "Iphone 12", null, 100, "Chưa có mô tả", new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(784) },
-                    { 2, 12000000, new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(790), "Chưa có mô tả", "Samsung Galaxy S21", null, 100, "Chưa có mô tả", new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(790) },
-                    { 3, 5000000, new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(791), "Chưa có mô tả", "Xiaomi Redmi Note 10", null, 100, "Chưa có mô tả", new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(792) },
-                    { 4, 20000000, new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(793), "Chưa có mô tả", "Apple Watch", null, 100, "Chưa có mô tả", new DateTime(2024, 7, 16, 13, 11, 46, 773, DateTimeKind.Local).AddTicks(793) }
+                    { "pro001", 10000000, new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7854), "Chưa có mô tả", "Iphone 12", null, 100, "Chưa có mô tả", new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7865) },
+                    { "pro002", 12000000, new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7871), "Chưa có mô tả", "Samsung Galaxy S21", null, 100, "Chưa có mô tả", new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7872) },
+                    { "pro003", 5000000, new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7874), "Chưa có mô tả", "Xiaomi Redmi Note 10", null, 100, "Chưa có mô tả", new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7874) },
+                    { "pro004", 20000000, new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7876), "Chưa có mô tả", "Apple Watch", null, 100, "Chưa có mô tả", new DateTime(2024, 7, 18, 12, 1, 48, 89, DateTimeKind.Local).AddTicks(7876) }
                 });
 
             migrationBuilder.InsertData(
@@ -367,10 +384,10 @@ namespace App.Migrations
                 columns: new[] { "CategoryId", "ProductId" },
                 values: new object[,]
                 {
-                    { 1, 1 },
-                    { 2, 2 },
-                    { 3, 3 },
-                    { 4, 4 }
+                    { 1, "pro001" },
+                    { 2, "pro001" },
+                    { 3, "pro001" },
+                    { 4, "pro001" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -419,11 +436,6 @@ namespace App.Migrations
                 column: "ImageId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductImages_ProductId",
-                table: "ProductImages",
-                column: "ProductId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Reviews_ParentId",
                 table: "Reviews",
                 column: "ParentId");
@@ -447,6 +459,9 @@ namespace App.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Admins");
+
             migrationBuilder.DropTable(
                 name: "Discounts");
 

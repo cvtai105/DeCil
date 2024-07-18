@@ -30,7 +30,7 @@ namespace App.Controllers
 
         // GET: api/Products/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        public async Task<ActionResult<Product>> GetProduct(string id)
         {
             var product = await _context.Products.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace App.Controllers
         // PUT: api/Products/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(int id, Product product)
+        public async Task<IActionResult> PutProduct(string id, Product product)
         {
             if (id != product.Id)
             {
@@ -79,14 +79,28 @@ namespace App.Controllers
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
             _context.Products.Add(product);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (ProductExists(product.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
             return CreatedAtAction("GetProduct", new { id = product.Id }, product);
         }
 
         // DELETE: api/Products/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProduct(int id)
+        public async Task<IActionResult> DeleteProduct(string id)
         {
             var product = await _context.Products.FindAsync(id);
             if (product == null)
@@ -100,7 +114,7 @@ namespace App.Controllers
             return NoContent();
         }
 
-        private bool ProductExists(int id)
+        private bool ProductExists(string id)
         {
             return _context.Products.Any(e => e.Id == id);
         }

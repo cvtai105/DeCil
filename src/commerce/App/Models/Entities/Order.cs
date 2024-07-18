@@ -16,6 +16,5 @@ namespace App.Models.Entities
         public DateTime? DeliveredAt { get; set; }
         public string? TrackingNumber { get; set; }
         public string? Status { get; set; }
-        
     }
 }

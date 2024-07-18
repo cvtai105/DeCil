@@ -36,17 +36,17 @@ namespace app.Models
             );
 
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Name = "Iphone 12", BasePrice = 10000000, Stock = 100 },
-                new Product { Id = 2, Name = "Samsung Galaxy S21", BasePrice = 12000000, Stock = 100 },
-                new Product { Id = 3, Name = "Xiaomi Redmi Note 10", BasePrice = 5000000, Stock = 100 },
-                new Product { Id = 4, Name = "Apple Watch", BasePrice = 20000000, Stock = 100 }
+                new Product { Id = "pro001", Name = "Iphone 12", BasePrice = 10000000, Stock = 100 },
+                new Product { Id = "pro002", Name = "Samsung Galaxy S21", BasePrice = 12000000, Stock = 100 },
+                new Product { Id = "pro003", Name = "Xiaomi Redmi Note 10", BasePrice = 5000000, Stock = 100 },
+                new Product { Id = "pro004", Name = "Apple Watch", BasePrice = 20000000, Stock = 100 }
             );
 
             modelBuilder.Entity<ProductCategory>().HasData(
-                new ProductCategory { ProductId = 1, CategoryId = 1 },
-                new ProductCategory { ProductId = 2, CategoryId = 2 },
-                new ProductCategory { ProductId = 3, CategoryId = 3 },
-                new ProductCategory { ProductId = 4, CategoryId = 4 }
+                new ProductCategory { ProductId = "pro001", CategoryId = 1 },
+                new ProductCategory { ProductId = "pro001", CategoryId = 2 },
+                new ProductCategory { ProductId = "pro001", CategoryId = 3 },
+                new ProductCategory { ProductId = "pro001", CategoryId = 4 }
             );
 
             modelBuilder.Entity<Admin>().HasData(

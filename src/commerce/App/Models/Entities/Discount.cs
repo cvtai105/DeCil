@@ -7,7 +7,7 @@ namespace App.Models.Entities
     {
         [Key]
         [ForeignKey("Product")]
-        public int ProductId { get; set; }
+        public string ProductId { get; set; } = null!;
         public int Value { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

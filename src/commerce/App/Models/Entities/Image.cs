@@ -7,7 +7,7 @@ namespace App.Models.Entities
 {
     public class Image
     {
-        public int Id { get; set; }
+        public string Id { get; set; } = null!;
         public string Name { get; set; } = "";
         public string? Link { get; set; }
         public IEnumerable<ProductImage>? Products { get; set; } = [];

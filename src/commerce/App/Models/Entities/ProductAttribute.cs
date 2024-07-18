@@ -8,7 +8,7 @@ namespace App.Models.Entities
     public class ProductAttribute
     {
         public int Id { get; set; } 
-        public int ProductId { get; set; }
+        public string ProductId { get; set; } = null!;
         public int AttributeId { get; set; }
         public string Value { get; set; } = "-";
         public int ImageId { get; set; }   

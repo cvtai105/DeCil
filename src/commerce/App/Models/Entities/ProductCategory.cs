@@ -7,7 +7,7 @@ namespace App.Models.Entities
     [PrimaryKey(nameof(ProductId), nameof(CategoryId))]
     public class ProductCategory
     {
-        public int ProductId { get; set; }
+        public string ProductId { get; set; } = null!;
         public int CategoryId { get; set; }
         public Product? Product { get; set; }
         public Category? Category { get; set; }

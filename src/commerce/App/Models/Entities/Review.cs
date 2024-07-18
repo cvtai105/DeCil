@@ -9,7 +9,7 @@ namespace App.Models.Entities
     public class Review
     {
         public int Id { get; set; }
-        public int ProductId { get; set; }
+        public string ProductId { get; set; } = null!;
         public int UserId { get; set; }
         [Required]
         public string? Content { get; set; }

@@ -74,9 +74,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<AdminService>();
-// builder.Services.AddScoped<TokenService>();
-var config = builder.Configuration;
-builder.Services.AddSingleton(config);
+builder.Services.AddScoped<TokenService>();
+builder.Services.AddSingleton<CloudinaryService>(new CloudinaryService(
+    builder.Configuration["Cloudinary:CloudName"],
+    builder.Configuration["Cloudinary:ApiKey"],
+    builder.Configuration["Cloudinary:ApiSecret"]
+));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

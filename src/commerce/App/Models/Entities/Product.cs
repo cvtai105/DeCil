@@ -7,7 +7,7 @@ namespace App.Models.Entities
 {
     public class Product
     {
-        public int Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; } = "Chưa đặt tên";
         public string? Picture { get; set; }
         public string Summary { get; set; } = "Chưa có mô tả";
@@ -17,10 +17,10 @@ namespace App.Models.Entities
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
-        public IEnumerable<Review>? Reviews { get; set; } = [];
-        public IEnumerable<ProductAttribute>? Attributes { get; set; } = [];
-        public IEnumerable<ProductImage>? Images { get; set; } = [];
-        public IEnumerable<ProductCategory>? Categories { get; set; } = [];
+        public IEnumerable<Review>? Reviews { get; set; }
+        public IEnumerable<ProductAttribute>? Attributes { get; set; } 
+        public IEnumerable<ProductImage>? Images { get; set; }
+        public IEnumerable<ProductCategory>? Categories { get; set; } 
         public Discount? Discount { get; set; }
 
     }

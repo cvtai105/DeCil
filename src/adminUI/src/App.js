@@ -6,16 +6,14 @@ import {
 } from "react-router-dom";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
+import Main from "./layouts/Main";
+import DashBoard from "./pages/Dashboard";
+
 
 const routes = createRoutesFromElements(
   <>
-    <Route path="/" element={<></> } >
-    </Route>
-
-    <Route path="/nhanvien" element={<></>} >
-    </Route>
-
-    <Route path="/doanhnghiep" element={ <></>}>
+    <Route path="/" element={<><Main></Main></> }>
+      <Route path="/" element={<DashBoard/>} />
     </Route>
 
     <Route path="*" element={<div>Not Found</div>} />
